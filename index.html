@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="jquery.js"></script>
+      <script src="data_generator.js"></script>
+      <link rel="stylesheet" type="text/css" href="twittlerui.css">
+    <title>TGA's Twittler</title>
+  </head>
+
+  <body>
+    <h1>WELCOME TO TGA's TWITTLER!</h1>
+
+    <!-- <header>WELCOME TO TGA's TWITTLER!</header> -->
+    <main>
+   <!--    <button id= "back to twittler"> -->
+    </main>
+    <footer></footer>
+
+<script>
+var nuTweets = streams.home;
+
+function myTweeter() {
+
+    $(document).ready(function(){
+        var $body = $('body');
+        $body.html('');
+    $('<img src="header2.png">').prependTo("body");
+    $('<img src="tgatwit.png">').appendTo("body");
+
+    var index = streams.home.length - 1;
+        while(index >= 0){
+          var tweet = streams.home[index];
+          var $tweet = $('<div></div>');
+          
+
+          $tweet.text('@' + tweet.user + ': ' + tweet.message + ' ' + tweet.created_at);
+          // display timestamp
+          $tweet.appendTo($body);
+          index -= 1;
+        }
+    
+
+var userLink = $('<a class= "username"></a>');
+  userLink.text('@' + tweet.user);
+
+  userLink.on('click', function(e){
+    e.preventDefault();
+    nuTweets = streams.users[tweet.user];
+  });
+
+      });
+  };
+
+
+var tweetLoader = setInterval(myTweeter, 1500);
+// auto load new tweets every half second
+
+  //   var currentPage;
+  //   var tweets;
+  //   var $main = $('.main');
+  //   var $header = $('.header');
+
+  //   var getPage = function (page) {
+  //   if (page !== currentPage) {
+  //     currentPage = page;
+  //      $main.html('');
+  //     lastTweetIndex = 0; 
+
+  //     // Build new page of tweets
+  //     tweets = page === 'home' ? streams.home : streams.users[page];
+  //     addNewTweets();
+
+  //     // Show username in the header  
+  //     $header.html(currentPage === 'home' ? '' : '<span class="page">' + currentPage + "'s tweets</span> " );
+  //   }
+  //   $('.user').off("click").click(function() {
+  //     getPage( ($(this).data('user')) ) ;
+  //   });
+
+  // };
+  
+
+    </script>
+  </body>
+</html>
