@@ -1,4 +1,5 @@
 # Twittler
+<<<<<<< HEAD
 
 ### What's Already Here
 This is a mostly-empty repo, with a file that creates some data that represents twitter users and their tweets.  It's the data you would expect to see if you had created a twitter account and followed a few people.  (More tweets appear over time.)
@@ -27,3 +28,5 @@ Extra credit:
 - [ ] Show when the tweets were created in a human-friendly way (eg "10 minutes ago").  You'll want to find and use a library for this.
 - [ ] Allow the user to tweet.  (This is going to require you to understand a little more about `data_generator.js`, but you shouldn't need to modify anything.)
 # Twittler
+=======
+>>>>>>> 8d706ba7803c5f28572c3c1619c7c4fffcac0532
